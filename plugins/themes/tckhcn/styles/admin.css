@@ -96,20 +96,6 @@ body.pkp_page_authorDashboard {
     z-index: 50 !important;
 }
 
-/* Dynamic Brand Header inside Sidebar */
-.app__nav::before {
-    content: "TCKHCN Duy Tân" !important;
-    display: block !important;
-    font-size: 15px !important;
-    font-weight: 800 !important;
-    color: #A32223 !important; /* DTU Red */
-    text-transform: uppercase !important;
-    text-align: center !important;
-    padding-bottom: 15px !important;
-    border-bottom: 1px solid #f1f5f9 !important;
-    margin-bottom: 15px !important;
-    letter-spacing: 0.5px !important;
-}
 
 /* 5. Navigation Items inside Sidebar */
 .app__navItem {
