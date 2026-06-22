@@ -1,92 +1,155 @@
 /* Custom Admin Dashboard Overrides for TCKHCN Theme
+ * remade in VOJS (Vietnam Open Journal System) Style
  *
  * Author: Vo Van Thuan - Trung Tâm CNPM CSE
  */
 
-/* Background color for the admin body */
+/* 1. Global Background Color */
 body.pkp_page_submissions,
 body.pkp_page_dashboard,
 body.pkp_page_management,
 body.pkp_page_settings,
-body.pkp_page_index {
-    background-color: #f4f5f7 !important;
+body.pkp_page_index,
+body.pkp_page_workflow,
+body.pkp_page_authorDashboard {
+    background-color: #f1f5f9 !important;
 }
 
-/* Main body wrapper */
+/* 2. Top Header Bar (.app__header) */
+.app__header {
+    background-color: #1e293b !important; /* Slate 800 */
+    min-height: 3rem !important;
+    height: 3rem !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+    border-bottom: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+}
+
+.app__contextTitle {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.5px !important;
+    padding-left: 20px !important;
+    text-decoration: none !important;
+}
+
+.app__contextTitle:hover {
+    color: #cbd5e1 !important;
+}
+
+/* User & Tasks dropdowns in top bar */
+.app__headerAction > button {
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+    transition: all 0.15s ease !important;
+}
+
+.app__headerAction > button:hover {
+    opacity: 1 !important;
+    transform: translateY(0) !important; /* Disable default lift effect */
+    color: #3b82f6 !important; /* Light blue on hover */
+    box-shadow: none !important;
+}
+
+.app__tasksCount {
+    background-color: #ef4444 !important; /* Red badge */
+    border-radius: 9999px !important;
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+    top: 6px !important;
+    right: 6px !important;
+    box-shadow: none !important;
+}
+
+/* 3. Main Body Structure */
 .app__body {
+    display: flex !important;
+    align-items: stretch !important;
+    min-height: calc(100vh - 3rem) !important;
+    background-color: #f1f5f9 !important;
+    padding: 0 !important;
     position: relative !important;
-    background-color: #f4f5f7 !important;
-    padding: 20px !important;
     box-sizing: border-box !important;
-    min-height: calc(100vh - 60px) !important;
 }
 
-/* Left sidebar menu container */
+/* 4. Left Sidebar Menu (.app__nav) - Full Height & Flat */
 .app__nav {
-    position: absolute !important;
-    left: 20px !important;
-    top: 20px !important;
-    width: 250px !important;
-    background: #ffffff !important;
-    border: 1px solid #e3e6ec !important;
-    border-radius: 8px !important;
-    padding: 15px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    position: fixed !important;
+    top: 3rem !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 240px !important;
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-radius: 0 !important;
+    padding: 24px 12px !important;
+    box-shadow: none !important;
     box-sizing: border-box !important;
+    overflow-y: auto !important;
+    z-index: 50 !important;
 }
 
-/* Right main content area */
-.app__main {
-    margin-left: 290px !important; /* 20px left margin + 250px sidebar width + 20px gap */
-    margin-right: 20px !important;
-    background: #ffffff !important;
-    border: 1px solid #e3e6ec !important;
-    border-radius: 8px !important;
-    padding: 25px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
+/* Dynamic Brand Header inside Sidebar */
+.app__nav::before {
+    content: "TCKHCN Duy Tân" !important;
+    display: block !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    color: #A32223 !important; /* DTU Red */
+    text-transform: uppercase !important;
+    text-align: center !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    margin-bottom: 15px !important;
+    letter-spacing: 0.5px !important;
 }
 
-/* Style the navigation links inside the left menu */
+/* 5. Navigation Items inside Sidebar */
 .app__navItem {
     display: block !important;
-    padding: 10px 15px !important;
-    color: #4a5568 !important;
+    padding: 10px 16px !important;
+    color: #475569 !important; /* Slate 600 */
     font-size: 14px !important;
     font-weight: 500 !important;
     text-decoration: none !important;
     border-radius: 6px !important;
-    transition: all 0.2s ease !important;
-    border-left: 3px solid transparent !important;
-    margin-bottom: 2px !important;
+    transition: all 0.15s ease !important;
+    border-left: none !important;
+    margin-bottom: 4px !important;
 }
 
 .app__navItem:hover {
-    background-color: #f7fafc !important;
-    color: #AD272A !important;
+    background-color: #f1f5f9 !important; /* Slate 100 */
+    color: #0f172a !important; /* Slate 900 */
 }
 
-/* Active current menu item */
+/* Current Active Sidebar Item */
 .app__navItem--isCurrent {
-    background-color: #fdf2f2 !important;
-    color: #AD272A !important;
-    border-left: 3px solid #AD272A !important;
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
     font-weight: 600 !important;
+    border-left: none !important;
 }
 
-/* Submenu structure */
+/* Sidebar Group Title Styling */
 .app__navGroup {
-    margin-bottom: 12px !important;
+    margin-bottom: 16px !important;
 }
 
 .app__navItem--hasSubmenu {
-    font-weight: 600 !important;
-    color: #2d3748 !important;
+    font-weight: 700 !important;
+    color: #94a3b8 !important; /* Slate 400 */
     text-transform: uppercase !important;
-    font-size: 12px !important;
-    letter-spacing: 0.5px !important;
-    padding: 10px 15px 5px 15px !important;
+    font-size: 10.5px !important;
+    letter-spacing: 0.75px !important;
+    padding: 12px 16px 6px 16px !important;
     pointer-events: none !important;
 }
 
@@ -96,24 +159,23 @@ body.pkp_page_index {
     margin: 0 !important;
 }
 
-.app__navGroup ul li {
-    margin-bottom: 1px !important;
+/* 6. Right Content Area (.app__main) */
+.app__main {
+    flex: 1 !important;
+    margin-left: 240px !important; /* Shifted by sidebar width */
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    background-color: #f1f5f9 !important;
+    padding: 24px !important;
+    min-height: calc(100vh - 3rem) !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .app__nav {
-        position: static !important;
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
-    
-    .app__main {
-        margin-left: 20px !important;
-    }
-}
-
-/* Widen content wrapper inside the main card area */
+/* Widen backend layout */
 .app__page {
     max-width: 100% !important;
     width: 100% !important;
@@ -125,4 +187,252 @@ body.pkp_page_index {
 .app__page.width--medium {
     max-width: 100% !important;
     width: 100% !important;
+}
+
+/* 7. Submissions List & Panel Styling (.listPanel) */
+.listPanel {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important; /* Slate 200 */
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+    margin-bottom: 24px !important;
+    overflow: hidden !important;
+}
+
+.listPanel__header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 16px 24px !important;
+}
+
+.listPanel__body {
+    border-top: none !important;
+}
+
+.listPanel__item {
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 16px 24px !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.listPanel__item:hover {
+    background-color: #f8fafc !important; /* Slate 50 */
+}
+
+.listPanel__item:last-child {
+    border-bottom: none !important;
+}
+
+/* 8. Submissions List Tabs (Filter Tabs) */
+.pkpTabs__buttons {
+    border-bottom: 1px solid #e2e8f0 !important;
+    background-color: #ffffff !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.pkpTabs__button {
+    border: none !important;
+    background: transparent !important;
+    color: #64748b !important; /* Slate 500 */
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    position: relative !important;
+    outline: none !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Relocate Active Line to Bottom (VOJS Style) */
+.pkpTabs__button::before {
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important; /* Thick bottom active bar */
+    background-color: transparent !important;
+    top: auto !important;
+    width: 100% !important;
+    transform: none !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.pkpTabs__button:hover {
+    color: #0f172a !important;
+}
+
+.pkpTabs__button:hover::before {
+    background-color: #cbd5e1 !important;
+}
+
+.pkpTabs__button[aria-selected=true] {
+    color: #2563eb !important; /* Blue 600 */
+    font-weight: 700 !important;
+}
+
+.pkpTabs__button[aria-selected=true]::before {
+    background-color: #2563eb !important;
+}
+
+/* Count badge inside filter tabs */
+.pkpTabs__button .pkpBadge {
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    border-radius: 9999px !important;
+    margin-left: 6px !important;
+    font-weight: 500 !important;
+}
+
+/* 9. Stage Badges inside Submission rows (VOJS Colors) */
+.listPanel__item--submission__stage .pkpBadge {
+    border-radius: 9999px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    padding: 4px 12px !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+    line-height: 1.4 !important;
+}
+
+/* Badge Modifiers */
+.pkpBadge--submission { /* Submission - Bài báo */
+    background-color: #fef2f2 !important;
+    color: #dc2626 !important;
+    border: 1px solid #fecaca !important;
+}
+
+.pkpBadge--review { /* Review - Phân biên */
+    background-color: #fffbeb !important;
+    color: #d97706 !important;
+    border: 1px solid #fef3c7 !important;
+}
+
+.pkpBadge--copyediting { /* Copyediting - Biên tập */
+    background-color: #eff6ff !important;
+    color: #2563eb !important;
+    border: 1px solid #dbeafe !important;
+}
+
+.pkpBadge--production { /* Production - Thiết kế/Xuất bản */
+    background-color: #ecfdf5 !important;
+    color: #059669 !important;
+    border: 1px solid #d1fae5 !important;
+}
+
+/* 10. Workflow Detail Page Action Buttons (Screenshot 2) */
+.pkp_workflow_decisions .pkp_button {
+    display: block !important;
+    width: 100% !important;
+    background-color: #ffffff !important;
+    color: #2563eb !important;
+    border: 1px solid #3b82f6 !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    padding: 8px 16px !important;
+    text-align: center !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    font-size: 13px !important;
+    box-sizing: border-box !important;
+    transition: all 0.15s ease !important;
+}
+
+.pkp_workflow_decisions .pkp_button:hover {
+    background-color: #eff6ff !important;
+    border-color: #2563eb !important;
+    color: #1d4ed8 !important;
+}
+
+/* Primary decision buttons (e.g. Accept Submission) */
+.pkp_workflow_decisions .pkp_button_primary {
+    background-color: #1e40af !important; /* Blue 800 */
+    color: #ffffff !important;
+    border: 1px solid #1e40af !important;
+}
+
+.pkp_workflow_decisions .pkp_button_primary:hover {
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+/* Warnable/Offset decision buttons (e.g. Decline Submission) */
+.pkp_workflow_decisions .pkp_button_offset {
+    background-color: #be185d !important; /* Pink 700 */
+    color: #ffffff !important;
+    border: 1px solid #be185d !important;
+}
+
+.pkp_workflow_decisions .pkp_button_offset:hover {
+    background-color: #9d174d !important;
+    border-color: #9d174d !important;
+    color: #ffffff !important;
+}
+
+/* 11. Workflow Sidebar Card Styling */
+.pkp_workflow_sidebar .pkp_controllers_grid {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+    margin-bottom: 20px !important;
+}
+
+.pkp_workflow_sidebar .pkp_controllers_grid .header {
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.pkp_workflow_sidebar .pkp_controllers_grid .header h4 {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+}
+
+/* 12. Breadcrumbs Styling (.app__breadcrumbs) */
+.app__breadcrumbs {
+    margin: -10px -10px 15px -10px !important;
+    font-size: 13px !important;
+    color: #64748b !important;
+}
+
+.app__breadcrumbs a {
+    color: #3b82f6 !important;
+    text-decoration: none !important;
+}
+
+.app__breadcrumbs a:hover {
+    text-decoration: underline !important;
+}
+
+.app__breadcrumbsSeparator {
+    color: #94a3b8 !important;
+    margin: 0 8px !important;
+}
+
+/* 13. Responsive Support for Left Sidebar */
+@media (max-width: 992px) {
+    .app__nav {
+        position: static !important;
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        height: auto !important;
+        padding: 16px !important;
+    }
+    
+    .app__main {
+        margin-left: 0 !important;
+    }
 }
