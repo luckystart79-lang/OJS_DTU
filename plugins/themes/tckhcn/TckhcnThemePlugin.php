@@ -17,6 +17,21 @@ class TckhcnThemePlugin extends \PKP\plugins\ThemePlugin
 {
     /** @var bool Recursion guard for payment page display */
     protected static $_isProcessingPayment = false;
+
+    /**
+     * @copydoc ThemePlugin::register
+     */
+    public function register($category, $path, $mainContextId = null)
+    {
+        $success = parent::register($category, $path, $mainContextId);
+        if ($success) {
+            // Register backend styles hook ALWAYS, even if this theme is not active in the current context
+            // so that the admin dashboard layout is customized site-wide.
+            \PKP\plugins\Hook::add('TemplateManager::display', [$this, 'addAdminStyles']);
+        }
+        return $success;
+    }
+
     /**
      * Khởi tạo theme. Kế thừa từ default theme và nạp thêm file CSS/LESS tùy biến.
      */
@@ -38,9 +53,6 @@ class TckhcnThemePlugin extends \PKP\plugins\ThemePlugin
 
         // Nạp stylesheet tùy biến để chỉnh sửa màu sắc, phông chữ, bố cục
         $this->addStyle('tckhcn-styles', 'styles/index.less');
-
-        // Hook để chèn styles tùy biến vào trang quản trị (backend dashboard)
-        Hook::add('TemplateManager::display', [$this, 'addAdminStyles']);
 
         // Hook để nạp dữ liệu đa ngôn ngữ và danh sách chuyên mục
         Hook::add('TemplateManager::display', [$this, 'loadTemplateData']);
