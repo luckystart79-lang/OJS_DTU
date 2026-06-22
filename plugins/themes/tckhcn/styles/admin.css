@@ -1,0 +1,128 @@
+/* Custom Admin Dashboard Overrides for TCKHCN Theme
+ *
+ * Author: Vo Van Thuan - Trung Tâm CNPM CSE
+ */
+
+/* Background color for the admin body */
+body.pkp_page_submissions,
+body.pkp_page_dashboard,
+body.pkp_page_management,
+body.pkp_page_settings,
+body.pkp_page_index {
+    background-color: #f4f5f7 !important;
+}
+
+/* Main body wrapper */
+.app__body {
+    position: relative !important;
+    background-color: #f4f5f7 !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    min-height: calc(100vh - 60px) !important;
+}
+
+/* Left sidebar menu container */
+.app__nav {
+    position: absolute !important;
+    left: 20px !important;
+    top: 20px !important;
+    width: 250px !important;
+    background: #ffffff !important;
+    border: 1px solid #e3e6ec !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    box-sizing: border-box !important;
+}
+
+/* Right main content area */
+.app__main {
+    margin-left: 290px !important; /* 20px left margin + 250px sidebar width + 20px gap */
+    margin-right: 20px !important;
+    background: #ffffff !important;
+    border: 1px solid #e3e6ec !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Style the navigation links inside the left menu */
+.app__navItem {
+    display: block !important;
+    padding: 10px 15px !important;
+    color: #4a5568 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+    border-left: 3px solid transparent !important;
+    margin-bottom: 2px !important;
+}
+
+.app__navItem:hover {
+    background-color: #f7fafc !important;
+    color: #AD272A !important;
+}
+
+/* Active current menu item */
+.app__navItem--isCurrent {
+    background-color: #fdf2f2 !important;
+    color: #AD272A !important;
+    border-left: 3px solid #AD272A !important;
+    font-weight: 600 !important;
+}
+
+/* Submenu structure */
+.app__navGroup {
+    margin-bottom: 12px !important;
+}
+
+.app__navItem--hasSubmenu {
+    font-weight: 600 !important;
+    color: #2d3748 !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    letter-spacing: 0.5px !important;
+    padding: 10px 15px 5px 15px !important;
+    pointer-events: none !important;
+}
+
+.app__navGroup ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.app__navGroup ul li {
+    margin-bottom: 1px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .app__nav {
+        position: static !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .app__main {
+        margin-left: 20px !important;
+    }
+}
+
+/* Widen content wrapper inside the main card area */
+.app__page {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.app__page.width, 
+.app__page.width--large, 
+.app__page.width--spacious,
+.app__page.width--medium {
+    max-width: 100% !important;
+    width: 100% !important;
+}

@@ -1,0 +1,6 @@
+volumes/
+.git/
+.github/
+.agents/
+cache/
+*.log

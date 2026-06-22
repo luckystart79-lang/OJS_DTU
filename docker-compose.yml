@@ -1,0 +1,42 @@
+services:
+  app:
+    build: .
+    container_name: ojs_app
+    ports:
+      - "8181:80"
+    volumes:
+      # Mount named volume for the cache directory to increase speed
+      - ojs_cache:/var/www/html/cache
+      # Bind mount only the custom theme for development
+      - ./plugins/themes/tckhcn:/var/www/html/plugins/themes/tckhcn
+      # Bind mount the config file
+      - ./config.inc.php:/var/www/html/config.inc.php
+      # Bind mount public files directory for uploads
+      - ./public:/var/www/html/public
+      # Bind mount for the files storage directory
+      - ./volumes/files:/var/www/files
+      # Bind mount the vi locale directories from host
+      - ./lib/pkp/locale/vi:/var/www/html/lib/pkp/locale/vi
+      - ./locale/vi:/var/www/html/locale/vi
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.6
+    container_name: ojs_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=ojs_root_pass
+      - MYSQL_DATABASE=ojs_tckhcn
+      - MYSQL_USER=ojs_user
+      - MYSQL_PASSWORD=ojs_password
+    volumes:
+      # Sử dụng Named Volume cho Database để tăng tốc độ truy vấn trên WSL2
+      - ojs_db_data:/var/lib/mysql
+    ports:
+      - "33066:3306"
+
+volumes:
+  ojs_cache:
+  ojs_db_data:

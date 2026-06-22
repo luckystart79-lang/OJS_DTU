@@ -1,0 +1,13 @@
+/volumes/
+/cache/*
+!/cache/.htaccess
+!/cache/index.html
+/public/*
+!/public/.htaccess
+!/public/index.html
+config.inc.php
+.env
+node_modules/
+npm-debug.log
+.DS_Store
+Thumbs.db

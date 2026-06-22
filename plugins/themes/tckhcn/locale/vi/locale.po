@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi\n"
+
+msgid "plugins.themes.tckhcn.name"
+msgstr "Tạp chí Khoa học và Công nghệ Theme"
+
+msgid "plugins.themes.tckhcn.description"
+msgstr "Giao diện tùy biến thiết kế riêng cho Tạp chí Khoa học và Công nghệ."
+
+msgid "plugins.themes.tckhcn.submitOnline"
+msgstr "Nộp bài trực tuyến"
+
+msgid "plugins.themes.tckhcn.indexingDatabases"
+msgstr "Cơ sở dữ liệu chỉ mục"
+
+msgid "plugins.themes.tckhcn.policiesRegulations"
+msgstr "Chính sách & Quy định"
+
+msgid "plugins.themes.tckhcn.doubleBlindReview"
+msgstr "Quy trình phản biện kín"
+
+msgid "plugins.themes.tckhcn.plagiarismPolicy"
+msgstr "Chính sách phòng chống đạo văn"
+
+msgid "plugins.themes.tckhcn.openAccessStatement"
+msgstr "Cam kết miễn phí đăng bài"
+
+msgid "plugins.themes.tckhcn.journalTitle"
+msgstr "TẠP CHÍ KHOA HỌC VÀ CÔNG NGHỆ ĐẠI HỌC DUY TÂN"
+
+msgid "plugins.themes.tckhcn.journalSubtitle"
+msgstr "DTU Journal of Science and Technology"
+
+msgid "plugins.themes.tckhcn.publisher"
+msgstr "Cơ quan chủ quản: Đại học Duy Tân"
+
+msgid "plugins.themes.tckhcn.licenseNumber"
+msgstr "Giấy phép hoạt động Tạp chí điện tử số 46/GP-BVHTTDL cấp ngày 30/05/2025"
+
+msgid "plugins.themes.tckhcn.editorInChief"
+msgstr "Tổng biên tập: PGS. TS. Võ Kim Cương"
+
+msgid "plugins.themes.tckhcn.contact"
+msgstr "LIÊN HỆ"
+
+msgid "plugins.themes.tckhcn.contactAddress"
+msgstr "P.13/3.6 Văn phòng Tạp chí Khoa học & Công nghệ Đại Học Duy Tân, 03 Quang Trung, Đà Nẵng."
+
+msgid "plugins.themes.tckhcn.copyright"
+msgstr "Đại học Duy Tân. Tất cả các quyền được bảo lưu."
+
+msgid "plugins.themes.tckhcn.searchPlaceholder"
+msgstr "Tìm kiếm bài báo..."
+
+msgid "plugins.themes.tckhcn.subtitleMain"
+msgstr "ĐẠI HỌC DUY TÂN"
+
+msgid "plugins.themes.tckhcn.aboutContext"
+msgstr "Giới thiệu Tạp chí"
+
+msgid "plugins.themes.tckhcn.readMore"
+msgstr "Xem thêm"
+
+msgid "plugins.themes.tckhcn.currentIssue"
+msgstr "Số mới nhất"
+
+msgid "plugins.themes.tckhcn.viewAll"
+msgstr "Xem tất cả"
+
+msgid "plugins.themes.tckhcn.noIssues"
+msgstr "Hiện tại chưa có số xuất bản nào được phát hành trực tuyến."
+
+msgid "plugins.themes.tckhcn.categories"
+msgstr "Chuyên mục tạp chí"
+
+msgid "plugins.themes.tckhcn.publishedArticles"
+msgstr "Bài báo đã Xuất bản"
+
+msgid "plugins.themes.tckhcn.aboutBannerAlt"
+msgstr "Giới thiệu Tạp chí Khoa học và Công nghệ"
+
+msgid "plugins.themes.tckhcn.abstract"
+msgstr "Tóm tắt"
+
+msgid "plugins.themes.tckhcn.pdfUpdating"
+msgstr "Bản PDF toàn văn đang được cập nhật."
+
+msgid "plugins.themes.tckhcn.issueDoi"
+msgstr "DOI Số"
+
+msgid "plugins.themes.tckhcn.cat.engineering"
+msgstr "Khoa học Kỹ thuật và Công nghệ"
+
+msgid "plugins.themes.tckhcn.cat.natural"
+msgstr "Khoa học Tự nhiên"
+
+msgid "plugins.themes.tckhcn.cat.social"
+msgstr "Khoa học Xã hội"
+
+msgid "plugins.themes.tckhcn.cat.health"
+msgstr "Khoa học Sức khỏe và Đời sống"
+
+msgid "plugins.themes.tckhcn.cat.interdisciplinary"
+msgstr "Liên ngành và Khoa học ứng dụng"
+
+msgid "plugins.themes.tckhcn.cat.humanities"
+msgstr "Khoa học Nhân văn và Nghệ thuật"
+
+msgid "plugins.themes.tckhcn.cat.engineering.query"
+msgstr "Kỹ thuật"
+
+msgid "plugins.themes.tckhcn.cat.natural.query"
+msgstr "Tự nhiên"
+
+msgid "plugins.themes.tckhcn.cat.social.query"
+msgstr "Xã hội"
+
+msgid "plugins.themes.tckhcn.cat.health.query"
+msgstr "Sức khỏe"
+
+msgid "plugins.themes.tckhcn.cat.interdisciplinary.query"
+msgstr "Liên ngành"
+
+msgid "plugins.themes.tckhcn.cat.humanities.query"
+msgstr "Nhân văn"

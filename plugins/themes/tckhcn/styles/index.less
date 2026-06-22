@@ -1,0 +1,1224 @@
+/**
+ * @file plugins/themes/tckhcn/styles/index.less
+ *
+ * Custom styles for TCKHCN theme (Duy Tan University Journal & International Standards).
+ *
+ * Author: Vo Van Thuan - Trung Tâm CNPM CSE
+ */
+
+// 1. Định nghĩa các biến Token màu sắc và phông chữ
+@primary-color: #A32223;       // Đỏ mận/đỏ đô học thuật đặc trưng DTU
+@primary-dark: #801B1C;        // Đỏ sậm hơn khi hover
+@text-dark: #2b2b2b;           // Màu chữ tối chính
+@text-muted: #666666;          // Màu chữ xám cho phụ đề, tác giả
+@bg-light: #f8f9fa;            // Nền xám nhẹ bổ trợ
+@border-color: #e9ecef;        // Màu viền chuẩn
+@nav-bg: #1a1a1a;              // Nền đen menu chính
+@nav-hover: #333333;           // Nền hover menu chính
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    color: @text-dark;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: @primary-color;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+        color: @primary-dark;
+        text-decoration: none;
+    }
+}
+
+// 2. Tùy biến Header & Top utility bar
+.lang-bar {
+    background-color: @primary-color;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #ffffff;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    ul.lang-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 15px;
+            
+            img {
+                height: 16px;
+                vertical-align: middle;
+                border-radius: 2px;
+                opacity: 0.8;
+                transition: opacity 0.2s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &.active img {
+                opacity: 1;
+                border: 1px solid #ffffff;
+            }
+        }
+    }
+
+    .login-links {
+        a {
+            color: #ffffff !important;
+            margin-left: 15px;
+            font-weight: 500;
+            
+            &:hover {
+                color: #e0e0e0 !important;
+            }
+        }
+    }
+}
+
+.header-top {
+    padding: 30px 0 15px 0;
+    background: url("/plugins/themes/tckhcn/images/banner2.png") no-repeat center right;
+
+    background-size: cover;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+
+    .bg_header {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .header-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+    }
+
+    .logo-col {
+        flex: 0 0 180px;
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex: 1;
+            width: 100%;
+        }
+
+        .logo-dtu {
+            width: 100%;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .logo-meta {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+
+            .cls_web {
+                border: 1px solid #ffffff;
+                border-radius: 20px;
+                padding: 4px 10px;
+                display: inline-block;
+                margin-bottom: 5px;
+
+                a {
+                    color: #ffffff !important;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    
+                    &:hover {
+                        color: #ffb13c !important;
+                    }
+                }
+            }
+
+            .issn {
+                color: #ffffff;
+                font-size: 13px;
+                font-weight: 700;
+                margin: 0;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+    .header-title-col {
+        flex: 1;
+
+        .title_main {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+        }
+
+        .subtitle-main {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFB13C; /* Accent yellow */
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+// 3. Tùy biến thanh điều hướng (Menu điều hướng)
+.navigation-bar {
+    background-color: #ffffff;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul.nav-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li.menu-item {
+            position: relative;
+
+            a {
+                display: block;
+                padding: 15px 18px;
+                color: @text-dark;
+                font-size: 14px;
+                font-weight: 600;
+                transition: background-color 0.2s, color 0.2s;
+
+                i {
+                    font-size: 10px;
+                    margin-left: 4px;
+                }
+            }
+
+            &:hover > a {
+                background-color: #f8f9fa;
+                color: @primary-color;
+            }
+
+            // Dropdown menu
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #ffffff;
+                box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                min-width: 220px;
+                z-index: 999;
+                border-top: 3px solid @primary-color;
+
+                li {
+                    border-bottom: 1px solid @border-color;
+
+                    a {
+                        padding: 12px 18px;
+                        color: @text-dark;
+                        font-weight: 500;
+
+                        &:hover {
+                            background-color: @bg-light;
+                            color: @primary-color;
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            &:hover > ul {
+                display: block;
+            }
+        }
+    }
+
+    .nav-search {
+        padding: 10px 15px;
+
+        form {
+            display: flex;
+            align-items: center;
+
+            input[type="text"] {
+                padding: 6px 12px;
+                font-size: 13px;
+                border: 1px solid @border-color;
+                border-radius: 4px 0 0 4px;
+                background-color: #f8f9fa;
+                color: @text-dark;
+                width: 150px;
+                transition: width 0.3s;
+
+                &:focus {
+                    width: 200px;
+                    outline: none;
+                    background-color: #ffffff;
+                    color: @text-dark;
+                    border-color: @primary-color;
+                }
+            }
+
+            button {
+                padding: 6px 12px;
+                background-color: @primary-color;
+                border: 1px solid @primary-color;
+                color: #ffffff;
+                border-radius: 0 4px 4px 0;
+                cursor: pointer;
+                font-size: 13px;
+                
+                &:hover {
+                    background-color: @primary-dark;
+                }
+            }
+        }
+    }
+}
+
+// 4. Bố cục trang chủ (indexJournal)
+.homepage-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+
+// Khung giới thiệu (About Block)
+.about-block {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid @border-color;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+
+    .about-image {
+        flex: 0 0 45%;
+        margin-right: 35px;
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+    }
+
+    .about-content {
+        flex: 1;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: @primary-color;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid @primary-color;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 15px;
+            color: @text-dark;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .btn-more {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: @primary-color;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: @primary-dark;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+// Bố cục 2 cột chính/phụ
+.main-layout {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+
+    .content-area {
+        flex: 1;
+        min-width: 0; // Fix flexbox overflow
+    }
+
+    .sidebar-area {
+        flex: 0 0 320px;
+        width: 320px;
+    }
+}
+
+// Cột chính - Số mới nhất (Current Issue)
+.current-issue-section {
+    background-color: #ffffff;
+    border: 1px solid @border-color;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    margin-bottom: 30px;
+
+    .section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid @primary-color;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: @primary-color;
+            margin: 0;
+        }
+
+        a.view-archive {
+            font-size: 14px;
+            font-weight: 600;
+            color: @primary-color;
+
+            i {
+                margin-left: 4px;
+                font-size: 12px;
+            }
+            
+            &:hover {
+                color: @primary-dark;
+            }
+        }
+    }
+
+    .issue-layout-row {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        .issue-cover-col {
+            flex: 0 0 220px;
+            width: 220px;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                flex: 1;
+                width: 100%;
+            }
+
+            .issue-cover {
+                margin-bottom: 15px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 6px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                    border: 1px solid @border-color;
+                }
+            }
+
+            .vol-info {
+                background-color: @bg-light;
+                padding: 15px;
+                border-radius: 6px;
+                border: 1px solid @border-color;
+                text-align: left;
+
+                .journal-name {
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: @primary-color;
+                    margin: 0 0 8px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    i {
+                        font-size: 14px;
+                    }
+                }
+
+                .vol_publish_date {
+                    font-size: 13px;
+                    color: @text-muted;
+                    margin: 0 0 6px 0;
+                    font-weight: 500;
+                }
+
+                .vol_doi {
+                    font-size: 12px;
+                    color: @text-muted;
+                    margin: 0;
+                    word-break: break-all;
+
+                    a {
+                        color: @text-muted;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .issue-content-col {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+
+    // Chuyên mục lục (Table of Contents)
+    .toc-section {
+        margin-bottom: 30px;
+
+        h4.section-title {
+            font-size: 16px;
+            font-weight: 700;
+            background-color: @bg-light;
+            color: @primary-color;
+            padding: 8px 15px;
+            border-left: 4px solid @primary-color;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .paper-item {
+            padding: 15px 0;
+            border-bottom: 1px solid @border-color;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            h5.paper-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0 0 5px 0;
+                line-height: 1.4;
+
+                a {
+                    color: @text-dark;
+                    
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+
+            p.paper-title-en {
+                font-size: 14px;
+                color: @text-muted;
+                margin: 0 0 8px 0;
+                font-style: italic;
+                line-height: 1.4;
+            }
+
+            p.authors {
+                font-size: 13px;
+                color: @text-muted;
+                margin: 0 0 12px 0;
+                font-weight: 500;
+            }
+
+            .doi-block {
+                font-size: 12px;
+                color: @text-muted;
+                margin-bottom: 10px;
+                
+                a {
+                    color: @text-muted;
+                    text-decoration: underline;
+                    
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+
+            .action-buttons {
+                display: flex;
+                gap: 10px;
+
+                a.btn-abstract {
+                    padding: 5px 12px;
+                    background-color: @bg-light;
+                    color: @text-dark;
+                    border: 1px solid @border-color;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    
+                    i {
+                        margin-left: 4px;
+                    }
+
+                    &:hover {
+                        background-color: @border-color;
+                    }
+                }
+
+                a.btn-pdf {
+                    padding: 5px 15px;
+                    background-color: @primary-color;
+                    color: #ffffff !important;
+                    font-size: 12px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    
+                    &:hover {
+                        background-color: @primary-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Cột phụ - Sidebar
+.sidebar-section {
+    background-color: #ffffff;
+    border: 1px solid @border-color;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    margin-bottom: 25px;
+
+    h3.sidebar-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: @primary-color;
+        border-bottom: 2px solid @primary-color;
+        padding-bottom: 8px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+}
+
+// Nút Gửi bài nổi bật
+.btn-submit-manuscript {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: @primary-color;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(163,34,35,0.2);
+    margin-bottom: 25px;
+    transition: background-color 0.2s, transform 0.2s;
+
+    i {
+        margin-right: 8px;
+    }
+
+    &:hover {
+        background-color: @primary-dark;
+        transform: translateY(-2px);
+    }
+}
+
+// Logo chỉ mục học thuật
+.indexing-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+
+    a {
+        display: block;
+        padding: 5px;
+        border: 1px solid @border-color;
+        border-radius: 4px;
+        background-color: #ffffff;
+        transition: border-color 0.2s;
+
+        img {
+            max-width: 100%;
+            max-height: 45px;
+            object-fit: contain;
+            display: block;
+        }
+
+        &:hover {
+            border-color: @primary-color;
+        }
+    }
+}
+
+// Sidebar list info
+ul.sidebar-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 10px 0;
+        border-bottom: 1px solid @border-color;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            color: @text-dark;
+            display: flex;
+            align-items: center;
+            
+            i {
+                color: @primary-color;
+                margin-right: 8px;
+            }
+
+            &:hover {
+                color: @primary-color;
+            }
+        }
+    }
+}
+
+// 5. Chân trang (Footer đỏ Duy Tân)
+.footer-wrapper {
+    background-color: #AD272A;
+    padding: 40px 0 25px 0;
+    margin-top: 60px;
+    color: #ffffff;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .footer-columns {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 50px;
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+
+    h3.col-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    // Cột 1: Thông tin xuất bản & Logo
+    .publisher-info-col {
+        .footer-logo-row {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .footer-logo-img {
+                flex: 0 0 160px;
+                width: 160px;
+                background-color: transparent;
+                padding-top: 5px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+
+            .footer-logo-info {
+                flex: 1;
+
+                .col-title-main {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    margin: 0 0 5px 0;
+                    line-height: 1.4;
+                }
+
+                p {
+                    font-size: 13.5px;
+                    color: rgba(255, 255, 255, 0.9);
+                    margin: 0 0 6px 0;
+                    line-height: 1.5;
+                }
+
+                p.title-en {
+                    font-size: 13px;
+                    color: rgba(255, 255, 255, 0.7);
+                    margin: 0 0 12px 0;
+                    font-style: normal;
+                }
+
+                .licensing-block {
+                    margin-top: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 12px;
+                    color: rgba(255, 255, 255, 0.8);
+
+                    a {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+
+    // Cột 2: Liên hệ
+    .contact-info-col {
+        p {
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            line-height: 1.6;
+            
+            i {
+                color: #ffffff;
+                margin-right: 8px;
+                width: 16px;
+                text-align: center;
+            }
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                
+                &:hover {
+                    color: #ffb13c;
+                }
+            }
+        }
+    }
+
+    // Copyright bar
+    .copyright-bar {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+
+        @media (max-width: 576px) {
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 34px;
+                height: 34px;
+                border-radius: 4px;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                color: #ffffff;
+                font-size: 14px;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background-color: #ffffff;
+                    color: #AD272A;
+                    border-color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+// 6. Responsive layouts
+@media (max-width: 991px) {
+    .main-layout {
+        flex-direction: column;
+        
+        .sidebar-area {
+            flex: 1;
+            width: 100%;
+        }
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-block {
+        flex-direction: column;
+
+        .about-image {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .header-main .container {
+        flex-direction: column;
+        text-align: center;
+
+        .header-logo {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// 7. Chuyên mục tạp chí (Categories Grid)
+.journal-categories-section {
+    background-color: #ffffff;
+    border: 1px solid @border-color;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    margin-top: 40px;
+
+    .section-header {
+        border-bottom: 2px solid @primary-color;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: @primary-color;
+            margin: 0;
+        }
+    }
+
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .category-card {
+        border: 1px solid @border-color;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        transition: transform 0.2s, box-shadow 0.2s;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: @primary-color;
+        }
+
+        .category-card-img {
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-card-content {
+            padding: 15px;
+            text-align: center;
+
+            .cat-name {
+                font-weight: 700;
+                font-size: 15px;
+                color: @text-dark;
+                margin: 0 0 15px 0;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-category {
+                display: inline-block;
+                padding: 6px 16px;
+                background-color: @bg-light;
+                color: @text-dark;
+                border: 1px solid @border-color;
+                font-size: 13px;
+                font-weight: 600;
+                border-radius: 4px;
+                transition: all 0.2s;
+
+                i {
+                    margin-left: 4px;
+                    font-size: 11px;
+                }
+
+                &:hover {
+                    background-color: @primary-color;
+                    border-color: @primary-color;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+// 12. Tùy biến trang Hội Đồng Biên Tập (Editorial Team)
+.page_editorial_team {
+    .card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-color: @border-color !important;
+        
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
+            border-color: rgba(163, 34, 35, 0.25) !important;
+        }
+    }
+    
+    .member-contacts a:hover {
+        color: @primary-color !important;
+    }
+}
+
+// 13. Tùy biến trang Thống kê bài báo (Article Metrics Widget)
+.tckhcn_stats_card {
+    background: #ffffff;
+    border: 1px solid @border-color;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+
+    .stats_header_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid @border-color;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        h2.label {
+            font-size: 18px;
+            font-weight: 700;
+            color: @primary-color;
+            margin: 0;
+            text-transform: none;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .stats_summary_grid {
+            display: flex;
+            gap: 20px;
+
+            .stats_summary_item {
+                background: @bg-light;
+                border: 1px solid @border-color;
+                padding: 10px 20px;
+                border-radius: 6px;
+                text-align: center;
+                min-width: 120px;
+
+                .stats_count {
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: @primary-color;
+                    line-height: 1.2;
+                }
+
+                .stats_label {
+                    font-size: 12px;
+                    color: @text-muted;
+                    font-weight: 500;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    .stats_chart_container {
+        position: relative;
+        height: 280px;
+        width: 100%;
+    }
+}
+
+.entry_details .tckhcn_stats_card {
+    padding: 15px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+
+    .stats_header_row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        border-bottom: 1px solid @border-color !important;
+        padding-bottom: 12px !important;
+        margin-bottom: 15px !important;
+
+        h2.label {
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            color: @primary-color !important;
+            margin: 0 0 5px 0 !important;
+            text-transform: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .stats_summary_grid {
+            width: 100% !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+
+            .stats_summary_item {
+                min-width: 0 !important;
+                padding: 6px 4px !important;
+                background: @bg-light !important;
+                border: 1px solid @border-color !important;
+                border-radius: 6px !important;
+                text-align: center !important;
+
+                .stats_count {
+                    font-size: 16px !important;
+                    font-weight: 700 !important;
+                    color: @primary-color !important;
+                    line-height: 1.2 !important;
+                }
+
+                .stats_label {
+                    font-size: 10px !important;
+                    color: @text-muted !important;
+                    margin-top: 2px !important;
+                    line-height: 1.2 !important;
+                }
+            }
+        }
+    }
+
+    .stats_chart_container {
+        height: 200px !important;
+        width: 100% !important;
+    }
+}
+
+
+

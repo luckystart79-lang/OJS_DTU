@@ -1,0 +1,76 @@
+init() called at 2026-06-22 07:57:44
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:45
+init() called at 2026-06-22 07:57:45
+init() called at 2026-06-22 07:57:45
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:45
+init() called at 2026-06-22 07:57:45
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:54
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:54
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:54
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:55
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:57
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:58
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:58
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:58
+init() called at 2026-06-22 07:57:58
+init() called at 2026-06-22 07:57:58
+init() called at 2026-06-22 07:57:58
+init() called at 2026-06-22 07:57:58
+init() called at 2026-06-22 07:57:58
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:57:58
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:07
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:07
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:07
+init() called at 2026-06-22 07:58:07
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:07
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:11
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:11
+init() called at 2026-06-22 07:58:11
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:17
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:17
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:17
+init() called at 2026-06-22 07:58:17
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:17
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:19
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:19
+init() called at 2026-06-22 07:58:19
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:19
+parent is: APP\plugins\themes\default\DefaultThemePlugin
+init() called at 2026-06-22 07:58:20
+parent is: APP\plugins\themes\default\DefaultThemePlugin
