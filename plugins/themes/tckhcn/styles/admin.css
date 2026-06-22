@@ -121,7 +121,7 @@ body.pkp_page_authorDashboard {
     text-decoration: none !important;
     border-radius: 6px !important;
     transition: all 0.15s ease !important;
-    border-left: none !important;
+    border-left: 3px solid transparent !important;
     margin-bottom: 4px !important;
 }
 
@@ -135,7 +135,7 @@ body.pkp_page_authorDashboard {
     background-color: #f1f5f9 !important;
     color: #0f172a !important;
     font-weight: 600 !important;
-    border-left: none !important;
+    border-left: 3px solid #2563eb !important;
 }
 
 /* Sidebar Group Title Styling */
@@ -224,7 +224,7 @@ body.pkp_page_authorDashboard {
 }
 
 /* 8. Submissions List Tabs (Filter Tabs - Horizontal only) */
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__buttons {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons {
     border-bottom: 1px solid #e2e8f0 !important;
     background-color: #ffffff !important;
     padding: 0 16px !important;
@@ -233,7 +233,7 @@ body.pkp_page_authorDashboard {
     gap: 8px !important;
 }
 
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button {
     display: inline-block !important; /* Force inline-block layout */
     width: auto !important; /* Override width 100% inheritance */
     border: none !important;
@@ -252,7 +252,7 @@ body.pkp_page_authorDashboard {
 }
 
 /* Relocate Active Line to Bottom (VOJS Style) */
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button::before {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button::before {
     content: "" !important;
     position: absolute !important;
     bottom: 0 !important;
@@ -266,25 +266,25 @@ body.pkp_page_authorDashboard {
     transition: background-color 0.15s ease !important;
 }
 
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button:hover {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button:hover {
     color: #0f172a !important;
 }
 
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button:hover::before {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button:hover::before {
     background-color: #cbd5e1 !important;
 }
 
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button[aria-selected=true] {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button[aria-selected=true] {
     color: #2563eb !important; /* Blue 600 */
     font-weight: 700 !important;
 }
 
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button[aria-selected=true]::before {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button[aria-selected=true]::before {
     background-color: #2563eb !important;
 }
 
 /* Count badge inside filter tabs */
-.pkpTabs:not(.pkpTabs--side) .pkpTabs__button .pkpBadge {
+.pkpTabs:not(.pkpTabs--side) > .pkpTabs__buttons .pkpTabs__button .pkpBadge {
     background-color: #f1f5f9 !important;
     color: #475569 !important;
     border: 1px solid #e2e8f0 !important;
@@ -453,49 +453,49 @@ body.pkp_page_authorDashboard {
 }
 
 /* Submissions icon */
-.app__nav > ul > li > a.app__navItem[href*="submissions"]::before,
-.app__nav > ul > li > a.app__navItem[href*="submission"]::before {
+.app__nav > ul > li > a.app__navItem[href*="submissions" i]::before,
+.app__nav > ul > li > a.app__navItem[href*="submission" i]::before {
     content: "\f03a" !important; /* fa-list */
 }
 
 /* Issues icon */
-.app__nav > ul > li > a.app__navItem[href*="issue"]::before,
-.app__nav > ul > li > a.app__navItem[href*="catalog"]::before {
+.app__nav > ul > li > a.app__navItem[href*="issue" i]::before,
+.app__nav > ul > li > a.app__navItem[href*="catalog" i]::before {
     content: "\f02d" !important; /* fa-book */
 }
 
 /* Announcements icon */
-.app__nav > ul > li > a.app__navItem[href*="announcements"]::before {
+.app__nav > ul > li > a.app__navItem[href*="announcements" i]::before {
     content: "\f0a1" !important; /* fa-bullhorn */
 }
 
 /* DOIs icon */
-.app__nav > ul > li > a.app__navItem[href*="dois"]::before {
+.app__nav > ul > li > a.app__navItem[href*="dois" i]::before {
     content: "\f0c1" !important; /* fa-link */
 }
 
 /* Settings group icon */
-.app__nav > ul > li.app__navGroup:has(a[href*="settings"]) > .app__navItem--hasSubmenu::before {
+.app__nav > ul > li.app__navGroup:has(a[href*="settings" i]) > .app__navItem--hasSubmenu::before {
     content: "\f013" !important; /* fa-cog */
 }
 
 /* Tools icon */
-.app__nav > ul > li > a.app__navItem[href*="tools"]::before {
+.app__nav > ul > li > a.app__navItem[href*="tools" i]::before {
     content: "\f0ad" !important; /* fa-wrench */
 }
 
 /* Statistics group icon */
-.app__nav > ul > li.app__navGroup:has(a[href*="stats"]) > .app__navItem--hasSubmenu::before {
+.app__nav > ul > li.app__navGroup:has(a[href*="stats" i]) > .app__navItem--hasSubmenu::before {
     content: "\f080" !important; /* fa-bar-chart */
 }
 
 /* Admin icon */
-.app__nav > ul > li > a.app__navItem[href*="admin"]::before {
+.app__nav > ul > li > a.app__navItem[href*="admin" i]::before {
     content: "\f007" !important; /* fa-user */
 }
 
 /* Access / Users icon */
-.app__nav > ul > li > a.app__navItem[href*="access"]::before {
+.app__nav > ul > li > a.app__navItem[href*="access" i]::before {
     content: "\f0c0" !important; /* fa-users */
 }
 
@@ -550,6 +550,7 @@ body.pkp_page_authorDashboard {
     margin-bottom: 4px !important;
     text-decoration: none !important;
     display: block !important;
+    border-left: 3px solid transparent !important;
 }
 
 .app__navGroup ul .app__navItem:hover {
@@ -561,6 +562,7 @@ body.pkp_page_authorDashboard {
     background-color: #f1f5f9 !important;
     color: #2563eb !important; /* Blue active text */
     font-weight: 600 !important;
+    border-left: 3px solid #2563eb !important;
 }
 
 /* Shift main content container back to normal */
@@ -585,6 +587,7 @@ body:has(.app__navGroup .app__navItem--isCurrent) .app__main {
     gap: 4px !important;
     margin: 0 !important;
     box-sizing: border-box !important;
+    list-style: none !important; /* Force remove default list bullets */
 }
 
 .pkpTabs--side > .pkpTabs__buttons .pkpTabs__button {
@@ -613,6 +616,7 @@ body:has(.app__navGroup .app__navItem--isCurrent) .app__main {
     height: 100% !important;
     background-color: transparent !important;
     transition: background-color 0.15s ease !important;
+    transform: none !important; /* Reset vertical offset from parent default stylesheet */
 }
 
 .pkpTabs--side > .pkpTabs__buttons .pkpTabs__button:hover {
